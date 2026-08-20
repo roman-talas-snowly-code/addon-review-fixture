@@ -1,0 +1,16 @@
+name: Shoptet Addon PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+jobs:
+  checks:
+    # Reusable PR gate from shoptet/addon-repository-actions-config.
+    # Pinned to @main; switch the ref to a feature branch when testing
+    # unmerged tool changes (same pattern as the addon-ci-sandbox protocol).
+    uses: shoptet/addon-repository-actions-config/.github/workflows/checks.workflow.yml@main
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
