@@ -9,8 +9,9 @@ Inventory of every defect deliberately seeded into this fixture. Two layers:
    catalog (`catalog_version: 2026-07-28`, IDs A–J, P) that the deterministic
    linter intentionally does not gate on.
 
-This file lives in the repo-skeleton commit (branch `clean-base`), so a PR
-`main → clean-base` contains only the seeded code, not this inventory.
+This file lives in the repo-skeleton commit (`main`, the merge-base of the
+test PR), so the PR `feature/reviews-rocket → main` contains only the seeded
+code, not this inventory.
 
 ## 1. Linter baseline (measured: 267 findings — 168 ❌ blockers, 99 ⚠️)
 

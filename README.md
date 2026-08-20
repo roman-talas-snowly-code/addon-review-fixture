@@ -10,8 +10,12 @@
 
 ## What is inside
 
+`main` holds only this repo skeleton (README, ground truth, PR gate caller).
+The complete seeded addon lives on the `feature/reviews-rocket` branch and in
+the **permanently open pull request** from it — that PR is the test target.
+
 A fake partner addon ("Reviews Rocket" — product review badges and widgets)
-with a realistic repository layout:
+with a realistic repository layout (on the PR branch):
 
 ```
 src/
@@ -36,20 +40,24 @@ findings and the AI-only catalog findings — lives in
 ## How to use it
 
 **Linter (deterministic gate):** from a checkout of
-`shoptet/addon-repository-actions-config` (branch with `linter_review_tool/`):
+`shoptet/addon-repository-actions-config` (branch with `linter_review_tool/`),
+against a checkout of the `feature/reviews-rocket` branch:
 
 ```bash
 node linter_review_tool/review.js /path/to/addon-review-fixture/src
 ```
 
-**PR gate end-to-end:** the branch `clean-base` holds the repo skeleton
-without the addon code. Open a pull request **from `main` into `clean-base`**
-— the diff then contains exactly the seeded source files, and the
+**PR gate end-to-end:** the open pull request `feature/reviews-rocket → main`
+carries the complete seeded code as its diff, and the
 `.github/workflows/checks.workflow.yml` caller runs the reusable PR review
-over it.
+over it. To re-trigger, push to the PR branch (or close/reopen the PR); to
+test unmerged tool changes, switch the ref in the caller **on the PR branch**.
+This file and `GROUND-TRUTH.md` live in the merge-base skeleton commit, so
+they are not part of the PR diff.
 
-**AI review skill:** point the `st-addon-review` skill at this repository (or
-at the PR above) and compare its output against `GROUND-TRUTH.md`.
+**AI review skill:** point the `st-addon-review` skill at the PR (or at the
+`feature/reviews-rocket` branch) and compare its output against
+`GROUND-TRUTH.md`.
 
 ## Baseline
 
