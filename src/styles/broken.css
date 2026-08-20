@@ -1,0 +1,9 @@
+/* Experimental dark mode — work in progress. */
+
+.rr-badges.dark {
+  background: #222;
+  color: #eee;
+
+.rr-tooltip.dark {
+  background: #333;
+}
