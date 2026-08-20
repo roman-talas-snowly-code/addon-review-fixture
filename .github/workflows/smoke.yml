@@ -1,6 +1,7 @@
 name: Smoke
 on:
   push:
+  pull_request:
 
 jobs:
   smoke:
