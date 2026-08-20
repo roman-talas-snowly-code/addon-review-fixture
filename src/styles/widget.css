@@ -1,0 +1,81 @@
+/* Reviews Rocket widget styles */
+
+@font-face {
+  font-family: 'RRDisplay';
+  src: url('https://cdn.snowly.dev/reviews-rocket/fonts/rr-display.woff2') format('woff2');
+}
+
+a {
+  text-decoration: none;
+  color: #2a7ae2;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+body {
+  font-family: 'RRDisplay', sans-serif;
+}
+
+.rr-badges {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.badge {
+  background: #ffgg00;
+  padding: 4px 10px;
+  font-size: 9px;
+  border-radius: 12px;
+}
+
+.badge-author {
+  font-weight: bold;
+  font-size: 13pt;
+}
+
+.rr-tooltip {
+  position: absolute;
+  z-index: 99999;
+  background: #fff !important;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.rr-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+
+.price-old {
+  display: none;
+  width: 200px;
+}
+
+[data-testid="product-price"] {
+  color: #d32f2f !important;
+}
+
+.rr-badges {
+  justify-content: flex-start;
+}
+
+@media (max-width: 550px) {
+  .rr-badges {
+    flex-direction: column;
+  }
+  .badge {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .rr-tooltip {
+    display: none !important;
+  }
+}

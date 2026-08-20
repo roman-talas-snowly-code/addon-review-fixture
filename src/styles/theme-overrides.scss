@@ -1,0 +1,33 @@
+// Overrides so the eshop theme does not fight our widget.
+
+@import 'widget.css';
+@import 'widget.css';
+
+.header {
+  z-index: 10 !important;
+
+  .cart-count {
+    background: #e2452a !important;
+    font-size: 10px;
+  }
+}
+
+.p-detail-inner {
+  .price-final {
+    strong {
+      color: #e2452a !important;
+      font-size: 26pt;
+    }
+  }
+}
+
+.rr-summary {
+  .rr-stars {
+    color: #f5a623;
+    letter-spacing: 2px;
+  }
+
+  span {
+    vertical-align: middle;
+  }
+}
