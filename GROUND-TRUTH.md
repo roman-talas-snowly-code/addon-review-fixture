@@ -15,6 +15,15 @@ code, not this inventory.
 
 ## 1. Linter baseline (measured: 267 findings — 168 ❌ blockers, 99 ⚠️)
 
+> **PR-gate view (verified E2E 2026-09-01, tool merged to `main`):** the CI
+> reconcile step reports **264 findings — 167 ❌, 97 ⚠️** on PR #1. The delta
+> of 3 vs. the raw linter output is the *documented* fingerprint collapse
+> (the column is deliberately not part of a finding's identity, so same
+> rule + same message on the same line merge into one comment): `eqeqeq` ×2
+> on main.js:156 (−1 ❌) and `camelcase` ×2 on main.js:155 and :222 (−2 ⚠️).
+> Delivery verified: REQUEST_CHANGES verdict, 100 inline comments (cap) in
+> 4 chunks, full table in the run Summary.
+
 | Rule | Count | Severity | Where (main anchors) |
 |---|---|---|---|
 | `no-var` | 65 | ❌ | main.js, old/main-backup.js |
