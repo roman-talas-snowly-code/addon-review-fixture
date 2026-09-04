@@ -1,0 +1,22 @@
+{
+  "name": "reviews-rocket-addon",
+  "version": "1.0.4",
+  "description": "Reviews Rocket — product review badges and widgets for Shoptet eshops",
+  "main": "src/main.js",
+  "scripts": {
+    "build": "mkdir -p dist && cat src/main.js src/utils.js src/modules/*.js > dist/bundle.js",
+    "watch": "echo 'watch not implemented yet'"
+  },
+  "keywords": [
+    "shoptet",
+    "addon",
+    "reviews"
+  ],
+  "author": "Snowly Code",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1"
+  }
+}

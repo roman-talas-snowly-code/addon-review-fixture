@@ -1,0 +1,18 @@
+/* Print stylesheet for review vouchers. */
+
+.rr-voucher {
+  border: 1px dashed #999;
+  padding: 10pt;
+}
+
+@media print {
+  .rr-badges,
+  .rr-tooltip {
+    display: none;
+  }
+
+  .rr-voucher {
+    font-size: 11pt;
+    page-break-inside: avoid;
+  }
+}
